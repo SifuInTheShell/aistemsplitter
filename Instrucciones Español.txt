@@ -1,0 +1,44 @@
+🚀 Tutorial: Separación de Pistas con IA en REAPER 
+Este tutorial te enseñará a separar cualquier canción en 6 pistas independientes (Voz, Batería, Bajo, Guitarra, Piano y Otros) directamente dentro de REAPER, de forma gratuita y local.
+1. Requisitos Previos (Sólo se hace	 una vez)
+Antes de usar el script, tu computadora necesita tener instalado el "motor" de la inteligencia artificial.
+Instalar Python: Descarga e instala la última versión de python.org.
+Importante: Durante la instalación, marca la casilla que dice "Add Python to PATH".
+Instalar Demucs: Abre la terminal de tu sistema (pulsa la tecla Windows, escribe cmd y dale a Enter). Escribe el siguiente comando y pulsa Enter: pip install demucs
+Configurar REAPER: * Abre REAPER y ve a Options > Preferences > Plug-ins > ReaScript.
+Marca la casilla "Enable Python for use in ReaScripts".
+Si REAPER te pide la ruta de la python dll, suele detectarla sola tras reiniciar el programa.
+
+2. Instalación del Script
+Descarga el archivo AI_Stem_Splitter_by_Oliver_Tkach.lua.
+En REAPER, abre la lista de acciones presionando la tecla ? (o ve al menú Actions > Show action list).
+Haz clic en el botón New action (abajo a la derecha) y selecciona Load ReaScript....
+Busca y selecciona el archivo .lua que descargaste.
+
+
+3. Poner el comando en el Click Derecho (Menú Contextual)
+Para que sea fácil de usar, vamos a añadirlo al menú que sale al hacer click derecho sobre un audio:
+Ve al menú superior: Options > Customize menus/toolbars....
+En el desplegable de arriba a la izquierda, busca: Media item context.
+En la lista de la izquierda, baja hasta el final.
+Haz clic en Add... > Action....
+Busca "AI_Stem_Splitter_by_Oliver_Tkach" en la lista, selecciónalo y dale a Select/Close.
+(Opcional) Haz click derecho sobre la acción recién añadida y elige Rename para ponerle un nombre épico como:  “SEPARAR PISTAS” O “AI STEM SPLITTER”.
+IMPORTANTE: Haz clic en el botón Save (abajo a la derecha) para aplicar los cambios.
+
+4. Cómo usarlo
+Arrastra una canción o clip de audio a REAPER.
+Haz Click Derecho sobre el bloque de audio.
+Selecciona tu nueva opción (ej.  SEPARAR PISTAS ).
+Se abrirá una ventana negra (CMD). No la cierres. Espera a que llegue al 100% y se cierre sola.
+REAPER importará automáticamente los 6 tracks alineados y organizados en una carpeta.
+
+🛡️ Notas de Seguridad
+100% Privado: El proceso es local. Tu música no se sube a internet.
+Limpieza: El script usa la carpeta temporal de tu sistema para no dejar basura en tu disco duro.
+
+💖 Apoyo
+Si esta herramienta te ayudó, considerá apoyar su desarrollo.
+Tu donación me permite seguir creando herramientas gratuitas para la comunidad musical.
+👉 https://tecito.app/olivertkachmusic
+¡Gracias! 🙌

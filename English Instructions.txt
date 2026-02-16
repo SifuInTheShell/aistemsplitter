@@ -1,0 +1,89 @@
+🚀 Tutorial: AI Stem Separation in REAPER
+This tutorial will teach you how to split any song into 6 independent tracks (Vocals, Drums, Bass, Guitar, Piano, and Other) directly inside REAPER, for free and locally.
+
+1. Prerequisites (Only done once)
+Before using the script, your computer needs to have the AI “engine” installed.
+Install Python:
+ Download and install the latest version from python.org.
+ Important: During installation, check the box that says “Add Python to PATH.”
+Install Demucs:
+ Open your system terminal (press the Windows key, type cmd, and press Enter).
+ Type the following command and press Enter:
+pip install demucs
+
+Configure REAPER:
+Open REAPER and go to Options > Preferences > Plug-ins > ReaScript.
+
+
+Check the box “Enable Python for use in ReaScripts.”
+
+
+If REAPER asks for the Python DLL path, it usually detects it automatically after restarting the program.
+
+
+
+2. Script Installation
+Download the file AI_Stem_Splitter_by_Oliver_Tkach.lua.
+In REAPER:
+Open the Action List by pressing the ? key (or go to Actions > Show action list).
+
+
+Click the New action button (bottom right) and select Load ReaScript...
+
+
+Find and select the downloaded .lua file.
+
+
+3. Add the Command to the Right-Click Menu (Context Menu)
+To make it easy to use, let’s add it to the menu that appears when you right-click an audio item:
+Go to the top menu: Options > Customize menus/toolbars...
+
+
+In the dropdown at the top left, select: Media item context
+
+
+In the list on the left, scroll to the bottom.
+
+
+Click Add... > Action...
+
+
+Search for “AI_Stem_Splitter_by_Oliver_Tkach” in the list, select it, and click Select/Close.
+
+
+(Optional) Right-click the newly added action and choose Rename to give it an epic name like:
+ “SPLIT STEMS” or “AI STEM SPLITTER.”
+
+
+IMPORTANT: Click the Save button (bottom right) to apply the changes.
+
+
+
+4. How to Use It
+Drag a song or audio clip into REAPER.
+
+
+Right-click on the audio item.
+
+
+Select your new option (e.g., SPLIT STEMS).
+
+
+A black window (CMD) will open. Do not close it. Wait until it reaches 100% and closes automatically.
+
+
+REAPER will automatically import the 6 aligned tracks, organized inside a folder.
+
+
+
+🛡️ Security Notes
+100% Private: The process is fully local. Your music is not uploaded to the internet.
+ Clean Workflow: The script uses your system’s temporary folder to avoid leaving unnecessary files on your hard drive.
+💖 Support
+If this tool helped you, consider supporting its development.
+Your donation helps me keep creating free tools for the music community.
+👉 https://tecito.app/olivertkachmusic 
+Thank you! 🙌
+
+
+
