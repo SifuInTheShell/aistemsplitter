@@ -24,7 +24,7 @@ Before using the script, ensure you have the following installed:
 
 ---
 
-##❓ FAQ - Python & Installation
+## ❓ FAQ
 Q: Is it true that Demucs only works on Python 3.8 and is no longer available via pip?
 A: No, that is a common misconception. Demucs is actively maintained and works perfectly on Python 3.10 and 3.11. The script is designed to call Python globally, making it compatible with any modern stable version.
 
