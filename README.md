@@ -24,6 +24,33 @@ Before using the script, ensure you have the following installed:
 
 ---
 
+❓ FAQ - Python & Installation
+Q: Is it true that Demucs only works on Python 3.8 and is no longer available via pip?
+A: No, that is a common misconception. Demucs is actively maintained and works perfectly on Python 3.10 and 3.11. The script is designed to call Python globally, making it compatible with any modern stable version.
+
+Q: Why am I getting "command not found" or "pip is not recognized"?
+A: This usually happens if Python was installed without checking the "Add Python to PATH" box. Without this, your computer doesn't know where to find Python or the Demucs library.
+
+Q: How do I fix the installation easily?
+A: Follow these steps to ensure a perfect setup:
+
+Clean Start: Uninstall any old versions of Python.
+
+Stable Version: Install Python 3.10.11 from python.org.
+
+The "Secret" Step: During installation, you MUST check the box that says "Add Python to PATH".
+
+Run these commands in your terminal (CMD) one by one:
+
+python -m pip install --upgrade pip
+
+pip install -U demucs
+
+Q: What if I have permission errors when processing?
+A: You don't have to worry about that. This script uses the system's TEMP folder and a custom Lua binary copy function to bypass Windows permission restrictions and handle special characters in file names automatically.
+
+-----
+
 ## 🙌 Support this project / Apoya este proyecto
 
 Hi! If this script has helped improve your workflow or your productions, I would greatly appreciate your support to keep creating free tools for the community.
