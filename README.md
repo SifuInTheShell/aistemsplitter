@@ -14,6 +14,13 @@ Before using the script, ensure you have the following installed:
    * **Important:** During installation, check the box **"Add Python to PATH"**.
 2. **Demucs**: Open your terminal (CMD or PowerShell) and run:
    `pip install demucs`
+   
+📌 IMPORTANT NOTES (PLEASE READ):
+GPU vs CPU: You don't need an NVIDIA card to run this.
+NVIDIA Users: The script will use CUDA and process songs in seconds.
+Everyone else: The script will automatically use your CPU. It works perfectly and with the same high quality, but it will take longer (around 3-7 minutes per song). Just be patient while the AI does its magic!
+The "TorchCodec" Error Fix: If you get a critical error about TorchCodec, it's a common issue with newer Python versions. You can fix it easily by running this command in your terminal/CMD: pip install "torchaudio<2.5.0" This will install a stable version that doesn't require extra codecs.
+First Run: The very first time you use the script, it will download the AI models (about 2GB). This only happens once!
 
 ## 🚀 Installation
 1. **Download** the `.lua` file from this repository.
