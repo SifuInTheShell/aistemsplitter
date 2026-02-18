@@ -1,7 +1,3 @@
-He actualizado la sección de Requirements y el FAQ para incluir las soluciones técnicas que mencionamos (FFmpeg, Soundfile y el comando de instalación optimizado). He mantenido toda la estructura original intacta.
-
-Aquí tienes el texto actualizado:
-
 AI Stem Splitter by Oliver Tkach
 A professional ReaScript for REAPER that utilizes Artificial Intelligence (Demucs) to separate audio into 6 high-fidelity tracks directly within your project.
 
