@@ -2,6 +2,8 @@
 
 Este tutorial te enseñará a dividir cualquier canción en **6 pistas independientes** (Voces, Batería, Bajo, Guitarra, Piano y Otros) directamente dentro de REAPER, de forma gratuita y local.
 
+SI TRABAJAS CON LINUX O MAC, DESCARGÁ ESTE: 'AI_Stem_Splitter_Universal (TRY THIS FOR MAC OR LINUX).lua'
+
 ## 1. Requisitos Previos (Se hace una sola vez)
 
 Antes de usar el script, tu computadora necesita tener instalado el "motor" de IA y estar correctamente configurada.
@@ -90,3 +92,4 @@ Si esta herramienta te ayudó, considera apoyar su desarrollo. Tu donación me a
 👉 **[https://tecito.app/olivertkachmusic]()**
 
 ¡Muchas gracias! 🙌
+
