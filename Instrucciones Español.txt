@@ -8,7 +8,7 @@ Un ReaScript profesional para **REAPER** que utiliza Inteligencia Artificial (**
 
 * **6 Stems:** Separa audio en Voz, Batería, Bajo, Guitarra, Piano y Otros.
 * **Privacidad:** Procesa todo localmente; nada se sube a la nube, 100% privado.
-* **Multiplataforma:** Un solo script para Windows, macOS y Linux.
+* **Multiplataforma:** Un solo script para Windows y Linux.
 * **Organización Automática:** Crea carpetas, nombra pistas y las alinea perfectamente.
 * **Respaldo Inteligente:** Incluye fallback automático a MP3 si la exportación WAV no está disponible.
 
@@ -22,7 +22,7 @@ Un ReaScript profesional para **REAPER** que utiliza Inteligencia Artificial (**
 
 2. **FFmpeg:** Esencial para la codificación de audio.
 * **Windows:** Instalar y añadir al PATH del sistema.
-* **Mac:** Ejecutar `brew install ffmpeg` en la terminal.
+
 
 
 3. **Librerías:** Ejecuta esto en tu terminal para evitar errores comunes:
@@ -58,7 +58,6 @@ Al no ser programador, la comunidad ha sido vital para profesionalizar este scri
 
 * **"Python no se reconoce":** Olvidaste marcar "Add Python to PATH" al instalar Python. Reinstálalo.
 * **"TorchCodec required":** Ejecuta `pip install torchcodec` en tu terminal.
-* **Errores de permisos en Mac:** Asegúrate de que REAPER tenga **Acceso total al disco** en los ajustes de Privacidad y Seguridad de macOS.
 * **NVIDIA vs CPU:** Los usuarios de NVIDIA procesarán en segundos vía CUDA. Los demás usarán la CPU (tarda 3-7 min), pero la **calidad sigue siendo profesional**.
 
 ---
@@ -72,3 +71,4 @@ Si este script ha mejorado tu flujo de trabajo, ¡puedes apoyar su desarrollo!
 
 Si quieres invitarme un "tecito" 🍵:
 ☕ **[Donar / Tecito](https://tecito.app/olivertkachmusic)**
+
