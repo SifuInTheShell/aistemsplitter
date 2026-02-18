@@ -1,37 +1,58 @@
-# AI Stem Splitter by Oliver Tkach
+He actualizado la sección de Requirements y el FAQ para incluir las soluciones técnicas que mencionamos (FFmpeg, Soundfile y el comando de instalación optimizado). He mantenido toda la estructura original intacta.
 
+Aquí tienes el texto actualizado:
+
+AI Stem Splitter by Oliver Tkach
 A professional ReaScript for REAPER that utilizes Artificial Intelligence (Demucs) to separate audio into 6 high-fidelity tracks directly within your project.
 
-## ✨ Features
-- **6 Stems:** Separate audio into Vocals, Drums, Bass, Guitar, Piano, and Other.
-- **Privacy:** Processes everything locally on your PC; nothing is uploaded to the cloud.
-- **Organization:** Automatically creates folders, names tracks, and aligns them to the original item's position.
-- **Efficiency:** Uses system temporary directories to avoid permission errors and keep your project folder clean.
+✨ Features
+6 Stems: Separate audio into Vocals, Drums, Bass, Guitar, Piano, and Other.
 
-## 🛠️ Requirements
+Privacy: Processes everything locally on your PC; nothing is uploaded to the cloud.
+
+Organization: Automatically creates folders, names tracks, and aligns them to the original item's position.
+
+Efficiency: Uses system temporary directories to avoid permission errors and keep your project folder clean.
+
+🛠️ Requirements
 Before using the script, ensure you have the following installed:
-1. **Python 3.10+**: Download it from [python.org](https://www.python.org/). 
-   * **Important:** During installation, check the box **"Add Python to PATH"**.
-2. **Demucs**: Open your terminal (CMD or PowerShell) and run:
-   `pip install demucs`
-   
+
+Python 3.10+: Download it from python.org.
+
+Important: During installation, check the box "Add Python to PATH".
+
+FFmpeg: Essential for audio encoding.
+
+Windows: Must be installed and added to your System PATH.
+
+Mac: Install via Homebrew (brew install ffmpeg).
+
+Libraries: Open your terminal (CMD or PowerShell) and run this optimized command to avoid common errors:
+pip install demucs soundfile==0.12.1 "torchaudio<2.5.0"
+
 📌 IMPORTANT NOTES (PLEASE READ):
+
 GPU vs CPU: You don't need an NVIDIA card to run this.
+
 NVIDIA Users: The script will use CUDA and process songs in seconds.
+
 Everyone else: The script will automatically use your CPU. It works perfectly and with the same high quality, but it will take longer (around 3-7 minutes per song). Just be patient while the AI does its magic!
-The "TorchCodec" Error Fix: If you get a critical error about TorchCodec, it's a common issue with newer Python versions. You can fix it easily by running this command in your terminal/CMD: pip install "torchaudio<2.5.0" This will install a stable version that doesn't require extra codecs.
+
+The "TorchCodec" & Backend Fix: If you get a "RuntimeError" or "TorchCodec" error, ensure you installed the specific versions mentioned in the requirements above (soundfile and torchaudio).
+
 First Run: The very first time you use the script, it will download the AI models (about 2GB). This only happens once!
 
-## 🚀 Installation
-1. **Download** the `.lua` file from this repository.
-2. In **REAPER**, open the **Action List** (shortcut key `?`).
-3. Click **New Action > Load ReaScript...** and select the downloaded file.
-4. **(Optional)** To add it to your right-click menu: 
-   Go to **Options > Customize menus/toolbars**, select **Media item context** from the dropdown, click **Add... > Action...**, find this script, and click **Save**.
+🚀 Installation
+Download the .lua file from this repository.
 
----
+In REAPER, open the Action List (shortcut key ?).
 
-## ❓ FAQ
+Click New Action > Load ReaScript... and select the downloaded file.
+
+(Optional) To add it to your right-click menu:
+Go to Options > Customize menus/toolbars, select Media item context from the dropdown, click Add... > Action..., find this script, and click Save.
+
+❓ FAQ
 Q: Is it true that Demucs only works on Python 3.8 and is no longer available via pip?
 A: No, that is a common misconception. Demucs is actively maintained and works perfectly on Python 3.10 and 3.11. The script is designed to call Python globally, making it compatible with any modern stable version.
 
@@ -51,25 +72,27 @@ Run these commands in your terminal (CMD) one by one:
 
 python -m pip install --upgrade pip
 
-pip install -U demucs
+pip install demucs soundfile==0.12.1 "torchaudio<2.5.0"
+
+Q: I get a "RuntimeError: Couldn't find appropriate backend" error.
+A: This is fixed by installing the soundfile library. Run: pip install soundfile==0.12.1 and make sure FFmpeg is correctly installed in your system's PATH.
 
 Q: What if I have permission errors when processing?
 A: You don't have to worry about that. This script uses the system's TEMP folder and a custom Lua binary copy function to bypass Windows permission restrictions and handle special characters in file names automatically.
 
------
-
-## 🙌 Support this project / Apoya este proyecto
-
+🙌 Support this project / Apoya este proyecto
 Hi! If this script has helped improve your workflow or your productions, I would greatly appreciate your support to keep creating free tools for the community.
 
 If you want to stay updated on more tools, music, and reactions, feel free to follow me on my social media:
 
-* 📸 **Instagram:** [@olivertkachmusic](https://www.instagram.com/olivertkachmusic)
-* 🎥 **YouTube:** [@olivertkachreactions](https://www.youtube.com/@olivertkachreactions)
-* 📱 **TikTok:** [@olivertkachmusic](https://www.tiktok.com/@olivertkachmusic)
+📸 Instagram: @olivertkachmusic
+
+🎥 YouTube: @olivertkachreactions
+
+📱 TikTok: @olivertkachmusic
 
 If you feel this work has added value to your life and would like to kindly buy me a coffee (or a "tecito" 🍵) to support the development of future projects, you can do so here:
 
-☕ **[Donate a Tecito (tecito.app/olivertkachmusic)](https://tecito.app/olivertkachmusic)**
+☕ Donate a Tecito (tecito.app/olivertkachmusic)
 
 Thank you so much for valuing my work, and I hope you enjoy your new stems! 🤘
