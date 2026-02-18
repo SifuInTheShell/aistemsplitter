@@ -1,4 +1,4 @@
-# 🤖 AI Stem Splitter by Oliver Tkach (Unified Version)
+# 🤖 AI Stem Splitter by Oliver Tkach (WIN/Linux)
 
 A professional ReaScript for **REAPER** that utilizes Artificial Intelligence (**Demucs**) to separate audio into 6 high-fidelity tracks directly within your project.
 
