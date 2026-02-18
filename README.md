@@ -26,6 +26,7 @@ Before using the script, ensure you have the following installed:
 `pip install demucs soundfile==0.12.1 "torchaudio<2.5.0"`
 
 📌 IMPORTANT NOTES (PLEASE READ):
+IF YOU ARE ON LINUX OR MAC, TRY THIS ONE: 'AI_Stem_Splitter_Universal (TRY THIS FOR MAC OR LINUX).lua'
 
 * **GPU vs CPU:** You don't need an NVIDIA card to run this.
 * **NVIDIA Users:** The script will use CUDA and process songs in seconds.
