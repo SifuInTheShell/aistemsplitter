@@ -8,7 +8,7 @@ A professional ReaScript for **REAPER** that utilizes Artificial Intelligence (*
 
 * **6 Stems:** Separate audio into Vocals, Drums, Bass, Guitar, Piano, and Other.
 * **Privacy:** Processes everything locally; no cloud uploads, 100% private.
-* **Cross-Platform:** One script for Windows, macOS, and Linux.
+* **Cross-Platform:** One script for Windows and Linux.
 * **Automatic Organization:** Creates folders, names tracks, and aligns them perfectly.
 * **Smart Fallback:** Now includes automatic MP3 fallback if WAV export is unavailable.
 
