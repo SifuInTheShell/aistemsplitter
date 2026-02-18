@@ -1,93 +1,74 @@
-# AI Stem Splitter by Oliver Tkach
+# 🤖 AI Stem Splitter by Oliver Tkach (Unified Version)
 
-A professional ReaScript for REAPER that utilizes Artificial Intelligence (Demucs) to separate audio into 6 high-fidelity tracks directly within your project.
+A professional ReaScript for **REAPER** that utilizes Artificial Intelligence (**Demucs**) to separate audio into 6 high-fidelity tracks directly within your project.
+
+> **Note:** I'm primarily an **audio guy**, not a professional developer. This tool was born out of a personal workflow need and built using AI assistance (Antigravity). I'm sharing it so other producers can benefit from it!
 
 ## ✨ Features
 
 * **6 Stems:** Separate audio into Vocals, Drums, Bass, Guitar, Piano, and Other.
-* **Privacy:** Processes everything locally on your PC; nothing is uploaded to the cloud.
-* **Organization:** Automatically creates folders, names tracks, and aligns them to the original item's position.
-* **Efficiency:** Uses system temporary directories to avoid permission errors and keep your project folder clean.
+* **Privacy:** Processes everything locally; no cloud uploads, 100% private.
+* **Cross-Platform:** One script for Windows, macOS, and Linux.
+* **Automatic Organization:** Creates folders, names tracks, and aligns them perfectly.
+* **Smart Fallback:** Now includes automatic MP3 fallback if WAV export is unavailable.
+
+---
 
 ## 🛠️ Requirements
 
-Before using the script, ensure you have the following installed:
-
-1. **Python 3.10+**: Download it from [python.org]().
-* **Important:** During installation, check the box **"Add Python to PATH"**.
+1. **Python 3.10+:** Download from [python.org](https://www.python.org/).
+* **CRITICAL:** During installation, check the box **"Add Python to PATH"**.
 
 
-2. **FFmpeg**: Essential for audio encoding.
-* **Windows:** Must be installed and added to your **System PATH**.
-* **Mac:** Install via Homebrew (`brew install ffmpeg`).
+2. **FFmpeg:** Essential for audio encoding.
+* **Windows:** Install and add to System PATH.
+* **Mac:** `brew install ffmpeg`.
 
 
-3. **Libraries**: Open your terminal (CMD or PowerShell) and run these commands:
-`python -m pip install --upgrade pip`
-`python -m pip install demucs soundfile==0.12.1`
-`python -m pip install torchcodec`
-
-📌 IMPORTANT NOTES (PLEASE READ):  
-**Both main scripts are now cross-platform (Windows, macOS, Linux). You do not need a separate universal file anymore.**
-
-* **GPU vs CPU:** You don't need an NVIDIA card to run this.
-* **NVIDIA Users:** The script will use CUDA and process songs in seconds.
-* **Everyone else:** The script will automatically use your CPU. It works perfectly and with the same high quality, but it will take longer (around 3-7 minutes per song). Just be patient while the AI does its magic!
-* **The "TorchCodec" & Backend Fix:** If you get a "TorchCodec is required" error, run `python -m pip install torchcodec`.
-* **First Run:** The very first time you use the script, it will download the AI models (about 2GB). This only happens once!
-
-## 🚀 Installation
-
-1. **Download** the `.lua` file from this repository.
-2. In **REAPER**, open the **Action List** (shortcut key `?`).
-3. Click **New Action > Load ReaScript...** and select the downloaded file.
-4. **(Optional)** To add it to your right-click menu:
-Go to **Options > Customize menus/toolbars**, select **Media item context** from the dropdown, click **Add... > Action...**, find this script, and click **Save**.
+3. **Libraries:** Run this in your terminal to avoid common errors:
+`python -m pip install demucs soundfile==0.12.1 torchcodec`
 
 ---
 
-## ❓ FAQ
+## 🚀 Installation & Usage
 
-**Q: Is it true that Demucs only works on Python 3.8 and is no longer available via pip?**
-A: No, that is a common misconception. Demucs is actively maintained and works perfectly on Python 3.10 and 3.11. The script is designed to call Python globally, making it compatible with any modern stable version.
-
-**Q: Why am I getting "command not found" or "pip is not recognized"?**
-A: This usually happens if Python was installed without checking the "Add Python to PATH" box. Without this, your computer doesn't know where to find Python or the Demucs library.
-
-**Q: How do I fix the installation easily?**
-A: Follow these steps to ensure a perfect setup:
-
-1. **Clean Start:** Uninstall any old versions of Python.
-2. **Stable Version:** Install Python 3.10.11 from python.org.
-3. **The "Secret" Step:** During installation, you MUST check the box that says "Add Python to PATH".
-4. **Run these commands in your terminal (CMD) one by one:**
-* `python -m pip install --upgrade pip`
-* `python -m pip install demucs soundfile==0.12.1`
-* `python -m pip install torchcodec`
+1. **Download** the script you prefer:
+* `AI Stem Splitter by Oliver Tkach - GUI.lua` (Recommended: Features a progress bar).
+* `AI Stem Splitter by Oliver Tkach.lua` (Standard version).
 
 
+2. **In REAPER:** Open **Action List (?) > New Action > Load ReaScript...** and select the file.
+3. **Run:** Select an audio item, run the script, and wait for the AI to work its magic.
+* *First run:* The script will download the AI models (approx. 2GB).
 
-**Q: I get a "RuntimeError: Couldn't find appropriate backend" error.**
-A: This is fixed by installing the `soundfile` library. Run: `pip install soundfile==0.12.1` and make sure **FFmpeg** is correctly installed in your system's PATH.
 
-**Q: What if I have permission errors when processing?**
-A: You don't have to worry about that. This script uses the system's TEMP folder and a custom Lua binary copy function to bypass Windows permission restrictions and handle special characters in file names automatically.
 
 ---
 
-## 🙌 Support this project
+## 🤝 Community Collaboration
 
-Hi! If this script has helped improve your workflow or your productions, I would greatly appreciate your support to keep creating free tools for the community.
+Since I'm not a coder, the community has been vital in making this script robust:
 
-If you want to stay updated on more tools, music, and reactions, feel free to follow me on my social media:
+* **Project Lead:** Oliver Tkach (Audio/Workflow logic).
+* **Major Contributor:** A huge thanks to **SifuInTheShell** for the professional refactoring, unifying cross-platform support, and implementing the smart fallback and logging systems.
 
-* 📸 **Instagram:** [@olivertkachmusic]()
-* 🎥 **YouTube:** [@olivertkachreactions]()
-* 📱 **TikTok:** [@olivertkachmusic]()
+---
 
-If you feel this work has added value to your life and would like to kindly buy me a coffee to support the development of future projects, you can do so here:
+## 🛠️ Troubleshooting (FAQ)
 
-☕ **[Donate (tecito.app/olivertkachmusic)]()**
+* **"Python not recognized":** You forgot to check "Add Python to PATH" during installation. Reinstall Python.
+* **"TorchCodec required":** Run `pip install torchcodec` in your terminal.
+* **Mac Permission Errors:** Ensure REAPER has **Full Disk Access** in System Settings > Privacy & Security.
+* **NVIDIA vs CPU:** NVIDIA users will process in seconds via CUDA. Everyone else will use CPU (takes 3-7 minutes), but the **quality remains professional grade**.
 
-Thank you so much for valuing my work, and I hope you enjoy your new stems! 🤘
+---
 
+## 🙌 Support the Project
+
+If this script has improved your workflow, feel free to support its development!
+
+📸 **Instagram:** [@olivertkachmusic](https://www.instagram.com/olivertkachmusic)
+🎥 **YouTube:** [@olivertkachreactions](https://www.youtube.com/@olivertkachreactions)
+
+If you'd like to buy me a coffee (or a "tecito" 🍵):
+☕ **[Donate / Tecito](https://tecito.app/olivertkachmusic)**
