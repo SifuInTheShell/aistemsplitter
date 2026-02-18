@@ -22,7 +22,6 @@ A professional ReaScript for **REAPER** that utilizes Artificial Intelligence (*
 
 2. **FFmpeg:** Essential for audio encoding.
 * **Windows:** Install and add to System PATH.
-* **Mac:** `brew install ffmpeg`.
 
 
 3. **Libraries:** Run this in your terminal to avoid common errors:
@@ -58,7 +57,6 @@ Since I'm not a coder, the community has been vital in making this script robust
 
 * **"Python not recognized":** You forgot to check "Add Python to PATH" during installation. Reinstall Python.
 * **"TorchCodec required":** Run `pip install torchcodec` in your terminal.
-* **Mac Permission Errors:** Ensure REAPER has **Full Disk Access** in System Settings > Privacy & Security.
 * **NVIDIA vs CPU:** NVIDIA users will process in seconds via CUDA. Everyone else will use CPU (takes 3-7 minutes), but the **quality remains professional grade**.
 
 ---
