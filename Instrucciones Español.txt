@@ -1,95 +1,74 @@
-# 🚀 Tutorial: Separación de Pistas por IA en REAPER
+# 🤖 AI Stem Splitter by Oliver Tkach (Versión Unificada)
 
-Este tutorial te enseñará a dividir cualquier canción en **6 pistas independientes** (Voces, Batería, Bajo, Guitarra, Piano y Otros) directamente dentro de REAPER, de forma gratuita y local.
+Un ReaScript profesional para **REAPER** que utiliza Inteligencia Artificial (**Demucs**) para separar audio en 6 pistas de alta fidelidad directamente en tu proyecto.
 
-SI TRABAJAS CON LINUX O MAC, DESCARGÁ ESTE: 'AI_Stem_Splitter_Universal (TRY THIS FOR MAC OR LINUX).lua'
+> **Nota:** Soy principalmente un **técnico de sonido**, no un desarrollador profesional. Esta herramienta nació de una necesidad personal y fue construida con ayuda de IA (Antigravity). ¡La comparto para que otros productores puedan aprovecharla!
 
-## 1. Requisitos Previos (Se hace una sola vez)
+## ✨ Características
 
-Antes de usar el script, tu computadora necesita tener instalado el "motor" de IA y estar correctamente configurada.
-
-### **Instalar Python:**
-
-* Descarga e instala **Python 3.10 o 3.11** desde [python.org]().
-* **Importante:** Durante la instalación, marca la casilla que dice **“Add Python to PATH”**.
-
-### **Instalar FFmpeg (Crítico):**
-
-* Este es el "traductor" que la IA usa para leer y escribir archivos de audio.
-* **Windows:** Descarga FFmpeg y agrégalo a las variables de entorno (PATH) de tu sistema.
-* **Mac:** Abre tu terminal y ejecuta `brew install ffmpeg`.
-
-### **Instalar Demucs y Dependencias:**
-
-Abre la terminal de tu sistema (Windows: `cmd`, Mac: `Terminal`) y ejecuta este comando específico para evitar errores comunes:
-`pip install demucs soundfile==0.12.1 "torchaudio<2.5.0"`
-
-> **Nota:** Si te aparece un error sobre "TorchCodec", ejecutar el comando de arriba lo solucionará automáticamente.
-
-### **Configurar REAPER:**
-
-1. Abre REAPER y ve a **Options > Preferences > Plug-ins > ReaScript**.
-2. Marca la casilla **“Enable Python for use in ReaScripts.”**
-3. Si REAPER te pide la ruta del archivo Python DLL, normalmente lo detecta solo tras reiniciar el programa.
+* **6 Stems:** Separa audio en Voz, Batería, Bajo, Guitarra, Piano y Otros.
+* **Privacidad:** Procesa todo localmente; nada se sube a la nube, 100% privado.
+* **Multiplataforma:** Un solo script para Windows, macOS y Linux.
+* **Organización Automática:** Crea carpetas, nombra pistas y las alinea perfectamente.
+* **Respaldo Inteligente:** Incluye fallback automático a MP3 si la exportación WAV no está disponible.
 
 ---
 
-## 2. Instalación del Script
+## 🛠️ Requisitos
 
-1. Descarga el archivo `AI_Stem_Splitter_by_Oliver_Tkach.lua`.
-2. En **REAPER**:
-* Abre la **Action List** presionando la tecla `?` (o ve a **Actions > Show action list**).
-* Haz clic en el botón **New action** (abajo a la derecha) y selecciona **Load ReaScript...**
-* Busca y selecciona el archivo `.lua` que descargaste.
+1. **Python 3.10+:** Descárgalo de [python.org](https://www.python.org/).
+* **CRÍTICO:** Durante la instalación, marca la casilla **"Add Python to PATH"**.
+
+
+2. **FFmpeg:** Esencial para la codificación de audio.
+* **Windows:** Instalar y añadir al PATH del sistema.
+* **Mac:** Ejecutar `brew install ffmpeg` en la terminal.
+
+
+3. **Librerías:** Ejecuta esto en tu terminal para evitar errores comunes:
+`python -m pip install demucs soundfile==0.12.1 torchcodec`
+
+---
+
+## 🚀 Instalación y Uso
+
+1. **Descarga** el script que prefieras de este repositorio:
+* `AI Stem Splitter by Oliver Tkach - GUI.lua` (Recomendado: tiene barra de progreso).
+* `AI Stem Splitter by Oliver Tkach.lua` (Versión estándar).
+
+
+2. **En REAPER:** Abre la **Action List (?) > New Action > Load ReaScript...** y selecciona el archivo.
+3. **Ejecución:** Selecciona un ítem de audio, corre el script y espera a que la IA haga su magia.
+* *Primera vez:* El script descargará los modelos de IA (aprox. 2GB).
 
 
 
 ---
 
-## 3. Agregar el comando al menú de clic derecho
+## 🤝 Colaboración de la Comunidad
 
-Para que sea fácil de usar, vamos a añadirlo al menú que aparece cuando haces clic derecho sobre un clip de audio:
+Al no ser programador, la comunidad ha sido vital para profesionalizar este script:
 
-1. Ve al menú superior: **Options > Customize menus/toolbars...**
-2. En el desplegable de arriba a la izquierda, selecciona: **Media item context**
-3. En la lista de la izquierda, baja hasta el final.
-4. Haz clic en **Add... > Action...**
-5. Busca “AI_Stem_Splitter_by_Oliver_Tkach” en la lista, selecciónalo y dale a **Select/Close**.
-6. **(Opcional)** Haz clic derecho sobre la acción recién agregada y elige **Rename** para darle un nombre épico como: “SEPARAR PISTAS (IA)” o “AI STEM SPLITTER”.
-7. **IMPORTANTE:** Haz clic en el botón **Save** (abajo a la derecha) para aplicar los cambios.
+* **Líder del Proyecto:** Oliver Tkach (Lógica de audio/Workflow).
+* **Colaborador Principal:** Un enorme agradecimiento a **SifuInTheShell** por la refactorización profesional, unificar el soporte multiplataforma y mejorar los sistemas de registro de errores.
 
 ---
 
-## 4. Cómo usarlo
+## 🛠️ Solución de Problemas (FAQ)
 
-1. **¡Guarda tu proyecto primero!** (Especialmente en Mac para evitar errores de permisos).
-2. Arrastra una canción o clip de audio a REAPER.
-3. Haz clic derecho sobre el ítem de audio.
-4. Selecciona tu nueva opción (ej. **SEPARAR PISTAS (IA)**).
-5. Se abrirá una ventana negra (CMD/Terminal). **No la cierres.**
-* *Primera vez:* Descargará unos 2GB de modelos de IA.
-* *Después:* Espera a que llegue al 100% y se cierre sola.
-
-
-6. REAPER importará automáticamente las 6 pistas alineadas y organizadas dentro de una carpeta.
+* **"Python no se reconoce":** Olvidaste marcar "Add Python to PATH" al instalar Python. Reinstálalo.
+* **"TorchCodec required":** Ejecuta `pip install torchcodec` en tu terminal.
+* **Errores de permisos en Mac:** Asegúrate de que REAPER tenga **Acceso total al disco** en los ajustes de Privacidad y Seguridad de macOS.
+* **NVIDIA vs CPU:** Los usuarios de NVIDIA procesarán en segundos vía CUDA. Los demás usarán la CPU (tarda 3-7 min), pero la **calidad sigue siendo profesional**.
 
 ---
 
-## 🛡️ Notas de Seguridad y Rendimiento
+## 🙌 Apoya el Proyecto
 
-* **100% Privado:** El proceso es totalmente local. Tu música no se sube a internet.
-* **Flujo Limpio:** El script usa la carpeta temporal de tu sistema para no dejar archivos basura en tu disco duro.
-* **GPU vs CPU:** * **Usuarios NVIDIA:** El script usará CUDA para procesar en segundos.
-* **Otros (Mac/AMD/Intel):** Usará el procesador (CPU). Tiene la misma calidad profesional pero tarda entre 3 y 7 minutos por canción.
+Si este script ha mejorado tu flujo de trabajo, ¡puedes apoyar su desarrollo!
 
+📸 **Instagram:** [@olivertkachmusic](https://www.instagram.com/olivertkachmusic)
+🎥 **YouTube:** [@olivertkachreactions](https://www.youtube.com/@olivertkachreactions)
 
-* **Usuarios de Mac:** Si recibes un error de "Destination error", ve a *Ajustes del Sistema > Privacidad > Acceso total al disco* y activa la casilla de REAPER.
-
-## 💖 Apoyo
-
-Si esta herramienta te ayudó, considera apoyar su desarrollo. Tu donación me ayuda a seguir creando herramientas gratuitas para la comunidad musical.
-
-👉 **[https://tecito.app/olivertkachmusic]()**
-
-¡Muchas gracias! 🙌
-
+Si quieres invitarme un "tecito" 🍵:
+☕ **[Donar / Tecito](https://tecito.app/olivertkachmusic)**
