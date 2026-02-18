@@ -2,6 +2,8 @@
 
 This tutorial will teach you how to split any song into **6 independent tracks** (Vocals, Drums, Bass, Guitar, Piano, and Other) directly inside REAPER, for free and locally.
 
+IF YOU ARE ON LINUX OR MAC, TRY THIS ONE: 'AI_Stem_Splitter_Universal (TRY THIS FOR MAC OR LINUX).lua'
+
 ## 1. Prerequisites (Only done once)
 
 Before using the script, your computer needs to have the AI “engine” installed and properly configured.
@@ -90,3 +92,4 @@ If this tool helped you, consider supporting its development. Your donation help
 👉 **[https://tecito.app/olivertkachmusic]()**
 
 Thank you! 🙌
+
